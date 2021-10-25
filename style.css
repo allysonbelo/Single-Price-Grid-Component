@@ -14,20 +14,19 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-
-body{
+body {
     background-color: var(--color-grayish-blue);
     font-family: 'Karla', sans-serif;
     font-size: 16px;
 }
 
-.base{
+.base {
     margin-bottom: 1.5rem;
     letter-spacing: 1.5px;
     line-height: 1.5rem;
 }
 
-.container{
+.container {
     background-color: var(--color-light-gray);
     border-radius: 5px;
     margin: 50px auto;
@@ -35,64 +34,61 @@ body{
     max-width: 778px;
     min-width: 375px;
     display: grid;
-    grid-template-areas: 
-    "join"
-    "subscription"
-    "why";
+    grid-template-areas: "join" "subscription" "why";
 }
 
-.join{
+.join {
     grid-area: join;
 }
 
-.join, .subscription, .why{
+.join, .subscription, .why {
     padding: 30px;
 }
 
-.join__titulo{
+.join__titulo {
     color: var(--color-cyan);
     font-weight: 700;
 }
 
-.join__subtitulo{
+.join__subtitulo {
     color: var(--color-right-yellow);
     font-size: 1rem;
 }
 
-.join__texto{
+.join__texto {
     color: var(--color-grayish-blue-text);
     font-size: .8rem;
 }
 
-.subscription{
+.subscription {
     background-color: var(--color-cyan);
     grid-area: subscription;
 }
 
-.subscription__titulo{
+.subscription__titulo {
     color: white;
 }
 
-.subscription__content__price{
+.subscription__content__price {
     display: flex;
     column-gap: .5rem;
 }
 
-.subscription__price{
+.subscription__price {
     color: var(--color-light-gray);
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.subscription__content__price .subscription__texto{
+.subscription__content__price .subscription__texto {
     color: rgba(255, 255, 255, .5);
 }
 
-.subscription__texto{
+.subscription__texto {
     color: var(--color-light-gray);
 }
 
-.subscription__button{
+.subscription__button {
     background-color: var(--color-right-yellow);
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, .2);
     border-radius: 5px;
@@ -105,16 +101,16 @@ body{
     margin: 0 auto;
 }
 
-.why{
+.why {
     background-color: var(--color-cyan-ligth);
     grid-area: why;
 }
 
-.why__titulo{
+.why__titulo {
     color: var(--color-light-gray);
 }
 
-.why__texto{
+.why__texto {
     color: var(--color-grayish-blue);
     width: 250px;
 }
@@ -129,6 +125,19 @@ body{
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (max-width: 1440px) {
-    
+@media screen and (min-width: 1440px) {
+    .container {
+        
+        grid-template-areas: "join join" "subscription why";
+        grid-template-columns: 1fr 1fr;
+    }
+    .join {
+        grid-template: join;
+    }
+    .subscription {
+        grid-template: arte;
+    }
+    .why {
+        grid-template: why;
+    }
 }
